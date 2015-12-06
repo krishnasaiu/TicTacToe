@@ -4,9 +4,21 @@ table, th, td {
 }
 
 th, td {
-    padding: 15px;
+    padding: 20px;
 }
 
 td:hover {
     background-color: #ffff99;
+}
+
+p {
+    text-align: center;
+}
+
+#centered {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    /* bring your own prefixes */
+    transform: translate(-50%, -50%);
 }
