@@ -112,3 +112,7 @@ function change(i, j) {
     } else
         document.getElementById(msg).innerHTML = "Invalid Selection";
 }
+
+function reload() {
+    location.reload();
+}
