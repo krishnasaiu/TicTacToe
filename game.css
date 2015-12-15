@@ -1,28 +1,33 @@
 body {
     font-family: 'Lato', serif;
-}
-
-table, th, td {
-    border: 1px solid black;
-    border-collapse: collapse;
-}
-
-th, td {
-    padding: 20px;
+    font-size: 30px;
 }
 
 td:hover {
     background-color: #66ffcc;
 }
 
-p {
-    text-align: center;
+th, td {
+    padding: 15px;
+    text-align: center;   
 }
 
-#centered {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    /* bring your own prefixes */
-    transform: translate(-50%, -50%);
+table { border: none; border-collapse: collapse; }
+
+table td { border-left: 5px solid #000; }
+
+table tr { border-bottom: 5px solid #000; }
+
+table td:first-child { border-left: none; }
+
+table tr:last-child { border-bottom: none; }
+
+.container-fluid {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  display: -webkit-flex; /* For Safari */
+  -webkit-justify-content: center; /* For Safari */
+  -webkit-align-items: center; /* For Safari */
 }

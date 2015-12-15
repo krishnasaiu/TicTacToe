@@ -72,9 +72,9 @@ function computerTurn() {
         if (result.value) {
             document.getElementById(msg).innerHTML = "Computer Won";
             gameover = true;
-            document.getElementById(result.t1).style.backgroundColor = "#ffff00";
-            document.getElementById(result.t2).style.backgroundColor = "#ffff00";
-            document.getElementById(result.t3).style.backgroundColor = "#ffff00";
+            document.getElementById(result.t1).style.backgroundColor = "#ff0000";
+            document.getElementById(result.t2).style.backgroundColor = "#ff0000";
+            document.getElementById(result.t3).style.backgroundColor = "#ff0000";
         } else
             document.getElementById(msg).innerHTML = "Your turn";
     } else {
@@ -114,5 +114,11 @@ function change(i, j) {
 }
 
 function reload() {
-    location.reload();
+    table = [[null, null, null],
+             [null, null, null],
+             [null, null, null]]
+    moves = ["00", "01", "02", "10", "11", "12", "20", "21", "22"]
+    turn = true
+    gameover = false
+    $('#gameboard').load('tictactoe.html #gameboard')
 }

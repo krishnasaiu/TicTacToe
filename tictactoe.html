@@ -1,15 +1,26 @@
+<!DOCTYPE html>
 <html>
     <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+        <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+        
         <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Lato">
         <link rel="stylesheet" type="text/css" href="game.css">
         <script src="game.js"></script>
     </head>
     
     <body>
-        <div id="centered">
-            <h1>Tic Tac Toe</h1>
-            <br>
-            <table>
+        <div>
+            <div class="jumbotron text-center">
+                <h1>Tic Tac Toe</h1> 
+                <p>Lets Play!</p> 
+            </div>
+            <div class="container-fluid" id="gameboard">
+            <table style="border 1px solid">
+                <tbody> 
                 <tr>
                     <td onclick="change(0, 0)" id="t00"><p id="00">&nbsp;&nbsp;&nbsp;&nbsp;</p></td>
                     <td onclick="change(0, 1)" id="t01"><p id="01">&nbsp;&nbsp;&nbsp;&nbsp;</p></td>
@@ -25,10 +36,14 @@
                     <td onclick="change(2, 1)" id="t21"><p id="21">&nbsp;&nbsp;&nbsp;&nbsp;</p></td>
                     <td onclick="change(2, 2)" id="t22"><p id="22">&nbsp;&nbsp;&nbsp;&nbsp;</p></td>
                 </tr>
+                </tbody>
             </table>
             <br>
-            <p id="msg">Your turn</p>
-            <center><button onclick="reload()">Rematch!!</button></center>
+            <div class="alert alert-info">
+                <strong id="msg">Your turn</strong>
+            </div>
+            <button onclick="reload()" class="btn btn-success">Rematch!!</button>
+            </div>
         </div>
     </body>
 </html>
